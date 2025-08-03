@@ -29,13 +29,8 @@ tests:
   - python:
       imports:
         - greenery
-      python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      python_version: ["${{ python_min }}.*", "3.*"]
+      pip_check: true
 
 about:
   summary: Greenery allows manipulation of regular expressions as finite state machines
